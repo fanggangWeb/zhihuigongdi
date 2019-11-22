@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "人员统计",
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

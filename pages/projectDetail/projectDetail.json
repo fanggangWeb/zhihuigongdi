@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "项目详情",
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "i-notice-bar": "../../dist/notice-bar/index"
+  }
+}

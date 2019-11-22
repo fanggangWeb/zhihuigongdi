@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/projectDetail/projectDetail",
+    "pages/attendence/attendence",
+    "pages/personManage/personManage",
+    "pages/personStatistics/personStatistics",
+    "pages/environmentMonitor/environmentMonitor",
+    "pages/videoMonitor/videoMonitor",
+    "pages/deviceInspect/deviceInspect",
+    "pages/deviceInspect/deviceDetail/deviceDetail",
+    "pages/modifyPhone/modifyPhone",
+    "pages/modifyPassword/modifyPassword",
+    "pages/personAlarm/personAlarm",
+    "pages/personCenter/personCenter",
+    "pages/popups/popups",
+    "pages/alertMessage/alertMessage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#eee",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧工地",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#BCBCBC",  
+    "selectedColor": "#1CB975",  
+    "borderStyle": "black" ,
+    "list": [
+      {
+        "selectedIconPath": "./assets/images/tab-home1.png",  
+        "iconPath": "./assets/images/tab-home.png",  
+        "pagePath": "pages/home/home",
+        "text": "工作管理"
+      },
+      {
+        "selectedIconPath": "./assets/images/tab-message1.png",  
+        "iconPath": "./assets/images/tab-message.png",  
+        "pagePath": "pages/home/home",
+        "text": "预警消息"
+      },
+      {
+        "selectedIconPath": "./assets/images/tab-personal.png",  
+        "iconPath": "./assets/images/tab-personal1.png",  
+        "pagePath": "pages/home/home",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "permission": {
+    "scope.camera": {
+      "desc": "是否授权摄像头"
+    },
+    "scope.record": {
+      "desc": "是否授权录音功能"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

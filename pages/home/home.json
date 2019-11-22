@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "智慧工地",
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#1CB975",
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "i-notice-bar": "../../dist/notice-bar/index"
+  }
+}

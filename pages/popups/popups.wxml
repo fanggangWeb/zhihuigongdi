@@ -1,0 +1,19 @@
+<view>
+  <!-- 蒙版 -->
+  <view id="box">
+
+  </view>
+  <!-- 弹窗底层 -->
+  <view id="popup">
+    <!-- 标题 -->
+    <text class="outtime">{{outtime}}</text>
+    <!-- 内容 -->
+    <view id="popup2">
+      <view class="popup3">
+        <text class="size">{{content}}</text>
+      </view>
+    </view>
+    <!-- 按钮 -->
+    <button id="click">{{click}}</button>
+  </view>
+</view>

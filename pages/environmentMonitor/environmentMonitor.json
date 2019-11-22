@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "环境检测",
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index"
+  }
+}

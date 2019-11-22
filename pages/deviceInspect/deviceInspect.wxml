@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="device-con"  wx:for="{{deviceList}}" bindtap="viewDetail">
+    <view class="device">
+      <image class="device-bg" src="../../assets/images/deviceInspect/device-bg.jpg"></image>
+      <view class="device-content">
+        <view class="name">设备二</view>
+        <view class="operator">操作员：章子怡</view>
+        <view class="status-con">
+          <view class="status-dot"></view>
+          <view class="status-text">在线</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

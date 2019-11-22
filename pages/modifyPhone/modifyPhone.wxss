@@ -1,0 +1,108 @@
+.container {
+  width: 100%;
+}
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 180rpx 30rpx 0 30rpx;
+}
+.big-title {
+  color: #222222;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.name {
+  color: #222222;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+/* 输入框 */
+.input-box {
+  width: 100%;
+  height: 120rpx;
+  /* border-radius: 4rpx; */
+  display: flex;
+  border-bottom: 2rpx solid #DDDDDD;
+  align-items: center;
+}
+
+.oldphone-box {
+  margin-top: 66rpx;
+}
+
+.input-icon {
+  width: 40rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.input-box .text {
+  width: 100rpx;
+  color: #222222;
+  font-size: 32rpx;
+}
+.input-box input {
+  width: calc(100% - 160rpx);
+  height: 120rpx;
+  line-height: 120rpx;
+  margin-left: 60rpx;
+  color: #222222;
+  font-size: 32rpx;
+}
+/* 输入新电话的长度受限 因为添加一个发送验证码的按钮 */
+.oldphone-box input {
+  width: calc(100% - 400rpx);
+}
+.sms-btn {
+  width: 220rpx;
+  height: 74rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  line-height: 74rpx;
+  border-radius: 38rpx;
+  background: #1CB975;
+  color: white;
+  white-space: nowrap;
+  font-size: 28rpx;
+  cursor: pointer;
+}
+.sms-btn.invalid {
+  background: #A9AEB4;
+}
+
+.place-style {
+  color: #A9AEB4;
+  font-weight: 300;
+}
+.error-msg {
+  height: 80rpx;
+  margin-top: 20rpx;
+  color: #E94747;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+/* 登录按钮 */
+.login-btn {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 40rpx;
+  background-color: #1CB975;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: white;
+  border-radius: 56rpx;
+  cursor: pointer;
+}
+.login-bg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 258rpx;
+  z-index: -1;
+}
+.login-bg image{
+  width: 100%;
+  height: 100%;
+}

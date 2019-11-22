@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "视频监控",
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index"
+  }
+}

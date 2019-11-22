@@ -1,0 +1,72 @@
+<view class="container">
+  <view class="search-con">
+    <input class="search-input" type="text" confirm-type="确认" placeholder="输入姓名查询" placeholder-class="place-style" maxlength="20" bindinput="inputChange">
+    </input>
+  </view>
+  <view class="classify">
+    <view class="classify-item">
+      <view class="number">5</view>
+      <view class="name">安全员</view>
+    </view>
+    <view class="classify-item">
+      <view class="number">135</view>
+      <view class="name">施工单位</view>
+    </view>
+    <view class="classify-item">
+      <view class="number">10</view>
+      <view class="name">监理单位</view>
+    </view>
+    <view class="classify-item">
+      <view class="number">5</view>
+      <view class="name">作业工人</view>
+    </view>
+    <view class="classify-item">
+      <view class="number">5</view>
+      <view class="name">其他</view>
+    </view>
+  </view>
+  <view class="list-con">
+    <view class="list">
+      <image class="avatar" src="../../assets/images/text.jpg"></image>
+      <view class="person-info">
+        <view class="name-con">
+          <view class="name">张绍忠</view>
+          <image class="sex" src="../../assets/images/sex-man.png"> </image>
+        </view>
+        <view class="company">监理单位</view>
+      </view>
+      <view class="work-info">
+        <view class="group-con">班组-重庆斜阳</view>
+        <view class="work-type">工种-木工</view>
+      </view>
+    </view>
+    <view class="list">
+      <image class="avatar" src="../../assets/images/text.jpg"></image>
+      <view class="person-info">
+        <view class="name-con">
+          <view class="name">张绍忠</view>
+          <image class="sex" src="../../assets/images/sex-man.png"> </image>
+        </view>
+        <view class="company">监理单位</view>
+      </view>
+      <view class="work-info">
+        <view class="group-con">班组-重庆斜阳</view>
+        <view class="work-type">工种-木工</view>
+      </view>
+    </view>
+    <view class="list">
+      <image class="avatar" src="../../assets/images/text.jpg"></image>
+      <view class="person-info">
+        <view class="name-con">
+          <view class="name">张绍忠</view>
+          <image class="sex" src="../../assets/images/sex-woman.png"> </image>
+        </view>
+        <view class="company">监理单位</view>
+      </view>
+      <view class="work-info">
+        <view class="group-con">班组-重庆斜阳</view>
+        <view class="work-type">工种-木工</view>
+      </view>
+    </view>
+  </view>
+</view>

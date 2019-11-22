@@ -1,0 +1,52 @@
+<view class="container">
+  <live-player id="player" orientation='horizontal' object-fit='fillCrop' class="top-video" src="rtmp://58.200.131.2:1935/livetv/hunantv" autoplay="{{true}}" mode="live" bindstatechange="statechange" binderror="error"/>
+  <view class="channel-info">
+  
+    <image class="channel-icon" src="../../assets/images/videoMonitor/channel-icon.png"></image>
+    <view class="channel-name">频道：1</view>
+    <view class="dot"></view>
+    <view class="stauts-text">在线</view>
+  </view>
+  <view class="video-list">
+    <view class="video-item">
+      <image class="poster" src="../../assets/images/text.jpg"></image>
+      <view class="info-bar">
+        <view class="name">频道1</view>
+        <view class="status">
+          <view class="status-dot"></view>
+          <view class="status-value">在线</view>
+        </view>
+      </view>
+    </view>
+    <view class="video-item">
+      <image class="poster" src="../../assets/images/text.jpg"></image>
+      <view class="info-bar">
+        <view class="name">频道1</view>
+        <view class="status">
+          <view class="status-dot"></view>
+          <view class="status-value">在线</view>
+        </view>
+      </view>
+    </view>
+    <view class="video-item">
+      <image class="poster" src="../../assets/images/text.jpg"></image>
+      <view class="info-bar">
+        <view class="name">频道1</view>
+        <view class="status">
+          <view class="status-dot"></view>
+          <view class="status-value">在线</view>
+        </view>
+      </view>
+    </view>
+    <view class="video-item">
+      <image class="poster" src="../../assets/images/text.jpg"></image>
+      <view class="info-bar">
+        <view class="name">频道1</view>
+        <view class="status">
+          <view class="status-dot"></view>
+          <view class="status-value">在线</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,129 @@
+.container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 40rpx;
+}
+.detail-con {
+  width: calc(100% - 50rpx);
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  padding: 40rpx 56rpx;
+  border-radius: 8rpx;
+  background: white;
+  box-shadow: 0rpx 8rpx 20rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 50rpx;
+}
+.header {
+  width: 100%;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .line {
+  width: 122rpx;
+  height: 2rpx;
+  background: #F1F1F1;
+}
+.header .title {
+  color: #1CB975;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 0 26rpx;
+}
+/* 次级标题的 */
+.subtitle {
+  width: 100%;
+  height: 44rpx;
+  line-height: 44rpx;
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.block {
+  width: 6rpx;
+  height: 32rpx;
+  background-color: #1CB975;
+}
+.device-name {
+  color: #222222;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 14rpx;
+  max-width: 390rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* background-color: tomato; */
+}
+.status-dot {
+  width: 10rpx;
+  height: 10rpx;
+  margin-left: 70rpx;
+  border-radius: 10rpx;
+  background-color: #14CC7C;
+}
+.status-text {
+  color: #222222;
+  font-size: 32rpx;
+  margin-left: 14rpx;
+}
+/* 第一种结构的主题结构 */
+.body-one {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+}
+.body-one .two-con {
+  width: 50%;
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.body-one .one-con {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.body-one .two-con .key, .one-con .key {
+  color: #666;
+  font-size: 32rpx;
+  display: inline;
+}
+.body-one .two-con .value, .one-con .value {
+  color: #222;
+  font-size: 32rpx;
+  font-weight: bold;
+  display: inline;
+}
+/* 第二种的主体结构 */
+.body-two {
+  width: 100%;
+  margin-top: 40rpx;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.row .left, .row .right {
+  width: 50%;
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+}
+.row .left {
+  color: #666666;
+}
+.row .right {
+  color: #222222;
+  font-weight: bold;
+  text-align: right;
+}

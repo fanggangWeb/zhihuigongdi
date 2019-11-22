@@ -1,0 +1,146 @@
+page {
+  background: #F5F5F5;
+}
+.container {
+  width: 100%;
+  background: #F5F5F5;
+}
+.search-con {
+  width: 100%;
+  height: 126rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  width: calc(100% - 60rpx);
+  height: 80rpx;
+  background: white;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  color: #222222;
+}
+.place-style {
+  color: #A9AEB4;
+  text-align: center;
+}
+/* 5种分类及数据 */
+.classify {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.classify-item {
+  flex: 1;
+  height: 150rpx;
+  background: white;
+  border-right: #F1F1F1 1rpx solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.classify-item:last-child {
+  border-right: none;
+}
+.classify-item .number, .classify-item .name {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.classify-item .number {
+  color: #222222;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.classify-item .name {
+  color: #666666;
+  font-size: 24rpx;
+  margin-top: 6rpx;
+}
+/* 人员的列表 */
+.list-con {
+  width: 100%;
+  padding-top: 10rpx;
+}
+.list {
+  width: 100%;
+  height: 170rpx;
+  background: white;
+  box-sizing: border-box;
+  padding: 36rpx 30rpx 34rpx 30rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.list .avatar {
+  width: 100rpx;
+  height: 100%;
+  border-radius: 50%;
+}
+.person-info {
+  width: 180rpx;
+  height: 100%;
+  margin-left: 20rpx;
+  /* background: red; */
+}
+.work-info {
+  width: 340rpx;
+  height: 100%;
+  margin-left: 20rpx;
+}
+/* 中间的名字和公司部门 */
+.person-info .name-con {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.person-info .name-con .name {
+  max-width: 143rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #222222;
+}
+.person-info .name-con .sex {
+  width: 23rpx;
+  height: 23rpx;
+  margin-left: 14rpx;
+}
+.person-info .company {
+  line-height: 50rpx;
+  color: #666666;
+  font-size: 26rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 最右边的工种和组 */
+.group-con {
+  width: 100%;
+  height: 50%;
+  line-height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 26rpx;
+  color: #222222;
+}
+.work-type {
+  width: 100%;
+  height: 50%;
+  line-height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 26rpx;
+  color: #222222;
+}

@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="top-con weather{{dayStatus}}">
+    <image class="top-image" src="{{weatherImage}}"></image>
+    <view class="address-en">jiangbei</view>
+    <view class="address-cn">江北</view>
+    <view class="temperature">27℃</view>
+    <view class="day">Monday 今天</view>
+  </view>
+  <view class="parameter">
+    <view class="line">
+      <view class="key">PM10</view>
+      <view class="value">2.4</view>
+    </view>
+    <view class="line">
+      <view class="key">PM2.5</view>
+      <view class="value">9.8</view>
+    </view>
+    <view class="line">
+      <view class="key">噪声</view>
+      <view class="value">20分贝</view>
+    </view>
+    <view class="line">
+      <view class="key">湿度</view>
+      <view class="value">3g/kg</view>
+    </view>
+    <view class="line">
+      <view class="key">风度</view>
+      <view class="value">6m/s</view>
+    </view>
+  </view>
+</view>

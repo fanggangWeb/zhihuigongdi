@@ -1,0 +1,123 @@
+page {
+  width: 100%;
+}
+.container {
+  width: 100%;
+}
+.date-con {
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 0 36rpx 0 54rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.cal-icon {
+  width: 32.7rpx;
+  height: 35rpx;
+}
+.date-con .text {
+  color: #7F8A8D;
+  font-size: 32rpx;
+  margin-left: 6rpx;
+}
+.date-picker {
+  height: 100%;
+  margin-left: auto;
+}
+.date-choose {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.date-value {
+  color: #222222;
+  font-size: 32rpx;
+}
+.date-con .arrow {
+  width: 26rpx;
+  height: 17rpx;
+  margin-left: 14rpx;
+}
+/* 切换的按钮 */
+.switch-bar {
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.bar-con {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bar {
+  height: 64rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 64rpx;
+  color: #666666;
+}
+.active .bar {
+  font-size: 32rpx;
+  color: #1CB975;
+  font-weight: bold;
+  border-bottom: solid #1CB975 4rpx ;
+}
+/* echart图标 */
+.echart {
+  width: 100%;
+  height: 380rpx;
+  /* background: green; */
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+/* 下方的网格 */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* border-top: #F1F1F1 2rpx solid; */
+}
+.grid-item {
+  box-sizing: border-box;
+  width: 25%;
+  height: 152rpx;
+  /* border-left: #F1F1F1 2rpx solid; */
+  border-bottom: #F1F1F1 2rpx solid;
+  border-right: #F1F1F1 2rpx solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid-item:nth-child(-n+4){
+  border-top: #F1F1F1 2rpx solid;  
+}
+.grid-item .number {
+  color: #222222;
+  font-size: 40rpx;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-top: 6rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.grid-item .name {
+  font-size: 24rpx;
+  color: #666666;
+  width: 100%;
+  text-align: center; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

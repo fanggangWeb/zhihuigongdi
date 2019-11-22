@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+/* 头部的天气包裹 */
+.top-con {
+  position: relative;
+  width: 100%;
+  height: 752rpx;
+  color: #000F70;
+}
+.weather1 {
+  color: #000F70;
+}
+.weather2 {
+  color: #411C00;
+}
+.weather3 {
+  color: white;
+}
+.top-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.address-en {
+  position: absolute;
+  right: 84rpx;
+  top: 64rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 40rpx;
+}
+.address-cn {
+  position: absolute;
+  right: 84rpx;
+  top: 128rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 40rpx;
+}
+.temperature {
+  position: absolute;
+  right: 84rpx;
+  top: 210rpx;
+  height: 168rpx;
+  line-height: 168rpx;
+  font-size: 120rpx;
+}
+.top-con .day {
+  position: absolute;
+  right: 84rpx;
+  top: 378rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+/* 各种气象参数开始 */
+.parameter{
+  width: 100%;
+}
+.line {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.line:nth-child(even) {
+  background-color: #F1F1F1;
+}
+.line > view {
+  width: 50%;
+  height: 100%;
+  line-height: 80rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.line .key {
+  text-align: left;
+  color: #666666;
+  font-size: 28rpx;
+}
+.line .value {
+  text-align: right;
+  color: #222222;
+  font-size: 32rpx;
+  font-weight: bold;
+}

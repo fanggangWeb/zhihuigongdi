@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "人员管理",
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "i-notice-bar": "../../dist/notice-bar/index"
+  }
+}

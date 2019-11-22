@@ -1,0 +1,151 @@
+{
+	"description": "智慧工地小程序",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.7",
+	"appid": "wx3de00b51d75f751a",
+	"projectname": "%E6%99%BA%E6%85%A7%E5%B7%A5%E5%9C%B0%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "项目详情",
+					"pathName": "pages/projectDetail/projectDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "项目考勤",
+					"pathName": "pages/attendence/attendence",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "人员管理",
+					"pathName": "pages/personManage/personManage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "人员统计",
+					"pathName": "pages/personStatistics/personStatistics",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "环境监测",
+					"pathName": "pages/environmentMonitor/environmentMonitor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "视频监控",
+					"pathName": "pages/videoMonitor/videoMonitor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设备监测",
+					"pathName": "pages/deviceInspect/deviceInspect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设备详情",
+					"pathName": "pages/deviceInspect/deviceDetail/deviceDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改电话",
+					"pathName": "pages/modifyPhone/modifyPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改密码",
+					"pathName": "pages/modifyPassword/modifyPassword",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "人员告警",
+					"pathName": "pages/personAlarm/personAlarm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预警消息",
+					"pathName": "pages/alertMessage/alertMessage",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

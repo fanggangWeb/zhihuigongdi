@@ -1,0 +1,113 @@
+.container {
+  width: 100%;
+  /* height: 100%; */
+}
+.top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 224rpx;
+  z-index: -1;
+}
+.top-bg > image {
+  width: 100%;
+  height: 100%;
+}
+/* 上方的地址处理 */
+.address-con {
+  width: 100%;
+  height: 108rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.address-con .icon {
+  width: 27rpx;
+  height: 34rpx;
+}
+.address-con .text {
+  width: calc(100% - 95rpx);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.address-con .arrow {
+  width: 28rpx;
+  height: 16rpx;
+}
+/* 大图 */
+.banner {
+  width: calc(100% - 60rpx);
+  height: 280rpx;
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+}
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+/* 头部导航栏 */
+.top-menu {
+  margin-top: 60rpx;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.top-menu .menu {
+  width: 110rpx;
+  margin-right: 74rpx;
+}
+.top-menu .menu:nth-child(4) {
+  margin-right: 0rpx;
+}
+.top-menu .menu .icon {
+  width: 100%;
+  height: 137rpx;
+}
+.top-menu .menu .name {
+  font-size: 24rpx;
+  text-align: center;
+  color: #222222;
+}
+/* 标题 */
+.title {
+  color: #222222;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 44rpx 0 28rpx 30rpx;
+}
+/* 工作管理菜单 */
+.work-menu {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  flex-wrap: wrap;
+}
+.work-menu .menu {
+  width: 110rpx;
+  margin-right: 74rpx;
+  margin-bottom: 40rpx;
+}
+.work-menu .menu:nth-child(4) {
+  margin-right: 0rpx;
+}
+.work-menu .menu .icon {
+  width: 110rpx;
+  height: 110rpx;
+}
+.work-menu .menu .text {
+  height: 34rpx;
+  margin-top: 14rpx;
+  line-height: 34rpx;
+  text-align: center;
+  color: #222222;
+  font-size: 24rpx;
+  white-space: nowrap;
+}

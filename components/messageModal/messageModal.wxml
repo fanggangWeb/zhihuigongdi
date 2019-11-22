@@ -1,0 +1,9 @@
+<view class="popup">
+  <view class="dialog">
+    <view class="dialog-title">{{title}}</view>
+    <view class="dialog-content">
+      {{content}}
+    </view>
+    <view class="confirm-btn" bind:tap="handleConfirm">{{confirmText}}</view>
+  </view>
+</view>

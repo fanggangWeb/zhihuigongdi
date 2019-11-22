@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="list-con">
+    <view class="list {{item.isRead==0?'':'isRead'}}" wx:for="{{dataList}}">
+      <view class="icon-con">
+        <view class="icon-dot" wx:if="{{item.isRead==0}}"></view>
+        <image class="icon-img" wx:if="{{item.type==1&&item.isRead==0}}" src="../../assets/images/Reentry.png"></image>
+        <image class="icon-img" wx:if="{{item.type==1&&item.isRead==1}}" src="../../assets/images/Reentry2.png"></image>
+        <image class="icon-img" wx:if="{{item.type==2&&item.isRead==0}}" src="../../assets/images/overtime.png"></image>
+        <image class="icon-img" wx:if="{{item.type==2&&item.isRead==1}}" src="../../assets/images/overtime2.png"></image>
+      </view>
+      <view class="text-con">
+        <view class="text-top">
+          <view class="type">{{item.title}}</view>
+          <view class="time">{{item.time}}</view>
+        </view>
+        <view class="text-bottom">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<message-modal wx:if="{{dialogState}}" bind:confirm="hadKnown" title="预警信息" content="某某某。。。" confirmText="我已知晓"></message-modal>

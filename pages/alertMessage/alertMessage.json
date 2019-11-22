@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "预警消息",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "message-modal": "../../components/messageModal/messageModal"
+  }
+}

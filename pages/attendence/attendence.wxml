@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="date-con">
+    <image class="cal-icon" src="../../assets/images/attendence/calendar.png"></image>
+    <view class="text">日期选择</view>
+    <picker class="date-picker" mode="date" bindchange="dateChange">
+      <view class="date-choose">
+        <view class="date-value">{{date}}</view>
+        <image class="arrow" src="../../assets/images/attendence/arrow-down.png"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="switch-bar">
+    <view class="{{item.value==switchValue?'bar-con active':'bar-con'}}"  wx:for="{{switchList}}" bindtap="swtichChange" data-item="{{item}}">
+      <view class="bar">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="echart">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <view class="grid">
+    <view class="grid-item">
+      <view class="number">5</view>
+      <view class="name">安全员</view>
+    </view>
+    <view class="grid-item">
+      <view class="number">5</view>
+      <view class="name">施工员</view>
+    </view>
+    <view class="grid-item">
+      <view class="number">5</view>
+      <view class="name">质量员</view>
+    </view>
+    <view class="grid-item">
+      <view class="number">5</view>
+      <view class="name">测量员</view>
+    </view>
+    <view class="grid-item">
+      <view class="number">5</view>
+      <view class="name">安全员</view>
+    </view>
+    <view class="grid-item">
+      <view class="number">5</view>
+      <view class="name">安全员</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,82 @@
+<view class="container">
+  <view class="detail-con">
+    <view class="header">
+      <view class="line"></view>
+      <view class="title">实时监测</view>
+      <view class="line"></view>
+    </view>
+    <view class="subtitle">
+      <view class="block"></view>
+      <view class="device-name">设备2</view>
+      <view class="status-dot"></view>
+      <view class="status-text">在线</view>
+    </view>
+    <view class="body-one">
+      <view class="two-con">
+        <view class="key">操作员：</view>
+        <view class="value">曹欢</view>
+      </view>
+      <view class="two-con">
+        <view class="key">小车幅度：</view>
+        <view class="value">11.9%</view>
+      </view>
+      <view class="two-con">
+        <view class="key">起重量：</view>
+        <view class="value">150kg</view>
+      </view>
+      <view class="two-con">
+        <view class="key">安全重量：</view>
+        <view class="value">-T</view>
+      </view>
+      <view class="two-con">
+        <view class="key">负荷率：</view>
+        <view class="value">50%</view>
+      </view>
+      <view class="two-con">
+        <view class="key">塔臂转角：</view>
+        <view class="value">288.8%</view>
+      </view>
+      <view class="one-con">
+        <view class="key">数据时间：</view>
+        <view class="value">2019-11-13</view>
+      </view>
+    </view>
+  </view>
+  <view class="detail-con">
+    <view class="header">
+      <view class="line"></view>
+      <view class="title">运行状态</view>
+      <view class="line"></view>
+    </view>
+    <view class="body-two">
+      <view class="row">
+        <view class="left">设备剩余寿命：</view>
+        <view class="right">5年</view>
+      </view>
+      <view class="row">
+        <view class="left">进场安装：</view>
+        <view class="right">1年190天</view>
+      </view>
+      <view class="row">
+        <view class="left">进场运行：</view>
+        <view class="right">1年170天</view>
+      </view>
+      <view class="row">
+        <view class="left">总体运行情况：</view>
+        <view class="right">良好</view>
+      </view>
+      <view class="row">
+        <view class="left">近24小时预警</view>
+        <view class="right">0次</view>
+      </view>
+      <view class="row">
+        <view class="left">近7日预警</view>
+        <view class="right">0次</view>
+      </view>
+      <view class="row">
+        <view class="left">近30日预警</view>
+        <view class="right">0次</view>
+      </view>
+    </view>
+  </view>
+</view>

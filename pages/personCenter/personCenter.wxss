@@ -1,0 +1,70 @@
+/* pages/center/center.wxss */
+/* 顶部图片 */
+.header>image:nth-child(1){
+  width: 750rpx;
+  height:312rpx;
+  display: block;
+}
+.header>image:nth-child(2){
+  width: 160rpx;
+  height:160rpx;
+  display: block;
+  margin-top: -260rpx;
+  margin-left: 30rpx;
+}
+/* 头像字体 */
+#name{
+  display: block;
+  margin-left: 220rpx;
+  margin-top: -130rpx;
+ color: #fff;
+ font-size: 40rpx;
+ font-weight:Medium;
+ font-family: PingFang SC;
+}
+#phone{
+  display: block;
+  color: #fff;
+  margin-left: 220rpx;
+  margin-top: 16rpx;
+  font-size: 32rpx;
+  font-weight: Medium;
+font-family: PingFang SC;
+}
+/* 中间内容样式 */
+.box{
+  /* border: 1px red solid; */
+  width: 688rpx;
+  margin: 0 auto;
+  margin-top: 116rpx;
+}
+.myphone{
+  border-bottom: 0.5rpx #f1f1f1 solid;
+  height: 120rpx;
+}
+.myphone>image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 38rpx;
+}
+.modify{
+  margin-left: 60rpx;
+  margin-top: -50rpx;
+  display: block;
+  color: #222;
+  font-size: 34rpx;
+  font-weight: Medium;
+}
+/* 粗体 */
+#bold{
+  width: 100%;
+  height: 10rpx;
+  background: #f1f1f1;
+  margin-top: -125rpx;
+}
+/* 底部背景图 */
+#background>image{
+  width: 750rpx;
+  height: 330rpx;
+  margin-top: 220px;
+}

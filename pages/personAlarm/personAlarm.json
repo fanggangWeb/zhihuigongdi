@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "人员告警",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "message-modal": "../../components/messageModal/messageModal"
+  }
+}

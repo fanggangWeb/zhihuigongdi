@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "项目考勤",
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "nav-bar": "/components/navbar/index",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}
