@@ -1,31 +1,31 @@
 <view class="container">
   <view class="first-title">项目名称</view>
   <view class="custom-text">
-    重庆市渝北区金融街·礼嘉地块（A23-2地块）建设工程
+    {{detailInfo.name}}
   </view>
   <view class="second-title"  style="margin-top: 36rpx">项目地址</view>
   <view class="custom-text">
-    两江新区
+    {{detailInfo.address}}
   </view>
   <view class="line"></view>
   <view class="second-title">建设单位</view>
   <view class="custom-text">
-    中铁房地产集团重庆有限公司
+    {{detailInfo.jsunit}}
   </view>
   <view class="second-title mg40">设计单位</view>
   <view class="custom-text">
-    四川国恒建筑设计有限公司
+    {{detailInfo.sjunit}}
   </view>
   <view class="second-title mg40">勘察单位</view>
   <view class="custom-text">
-    重庆蜀道岩土工程有限公司
+    {{detailInfo.kcunit}}
   </view>
   <view class="second-title mg40">监理单位</view>
   <view class="custom-text">
-    重庆华兴工程咨询有限公司
+    {{detailInfo.jlunit}}
   </view>
   <view class="second-title mg40">施工单位</view>
   <view class="custom-text">
-    中铁建筑集团有限公司
+    {{detailInfo.sgunit}}
   </view>
 </view>

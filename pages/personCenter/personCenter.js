@@ -1,73 +1,102 @@
-// pages/center/center.js
+import { fetch } from "../../utils/fetch"
+//Page Object
 Page({
-
   data: {
-    background:"../../assets/images/background2.png",
-    center:"../../assets/images/center.png",
-    myphone:"../../assets/images/phone.png",
-    password2:"../../assets/images/password.png",
-    out:"../../assets/images/switch.png",
-    img:"../../assets/images/background.png",
-    name: "韩先生",
-    phone: "15125364448",
-    modify: "修改电话",
-    password: "修改密码",
-    Logout:"退出登录",
+    avatarUrl: "../../assets/images/center.png",
+    userName: "",
+    userPhone: ""
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  //options(Object)
+  onLoad: function(options){
+    
+  },
+  onReady: function(){
+    
+  },
+  onShow: function(){
+    this.fetchUserInfo()
+  },
+  onHide: function(){
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  onUnload: function(){
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  modifyPhone () {
+    wx.navigateTo({
+      url: '../modifyPhone/modifyPhone'
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  modifyPassword () {
+    wx.navigateTo({
+      url: '../modifyPassword/modifyPassword'
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  // 获取登录的用户信息
+  fetchUserInfo () {
+    fetch({
+      url: "/user/info"
+    }).then(res => {
+      if (res.errcode == 0) {
+        this.setData({
+          avatarUrl: res.data.Avatar || "../../assets/images/center.png",
+          userName: res.data.name,
+          userPhone: res.data.mobile
+        })
+      } else {
+        wx.showModal({
+          title: '错误',
+          content: res.msg,
+          showCancel: false
+        });
+      }
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 退出登录
+  logOut () {
+    var that = this
+    wx.showModal({
+      title: '提示',
+      content: '确定退出该账户吗？',
+      showCancel: true,
+      cancelText: '取消',
+      cancelColor: '#000000',
+      confirmText: '确定',
+      confirmColor: '#3CC51F',
+      success: (result) => {
+        if(result.confirm){
+          fetch({
+            url: "/user/logout",
+          }).then(res => {
+            if (res.errcode == 0) {
+              wx.clearStorageSync();
+              wx.showToast({
+                title: '退出登录成功',
+                icon: 'success',
+                image: '',
+                duration: 2500,
+                mask: true
+              });
+              setTimeout(() => {
+                wx.reLaunch({
+                  url: '../login/login',
+                });
+              }, 2500)
+              
+            } else {
+              wx.showToast({
+                title: '退出登录失败',
+                icon: 'none',
+                image: '',
+                duration: 2500,
+                mask: true
+              });
+            }
+          })
+        }
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   }
-})
+});

@@ -1,25 +1,24 @@
 /**
  * 封装http 请求方法
  */
-export const apiUrl = "http://192.168.50.238:9001" // 服务器api地址
-// export const uploadUrl = "http://192.168.2.80:9001/common/upload"
-// export const imageURL = 'http://192.168.2.80:9001' // 统一图片地址
-// export const apiUrl = "http://94.191.108.118:8080/kang-interface" // 服务器api地址
-export const uploadUrl = "http://94.191.108.118:8080/kang-interface/common/upload" // 统一上传文件地址
+export const apiUrl = "http://app.weiotchina.cn:9002" // 服务器api地址
+export const uploadUrl = "" // 统一上传文件地址
 export const imageURL = 'http://94.191.108.118:8080/kang-resource/' // 统一图片地址
 export const fetch = (params) => {
   //返回promise 对象
   return new Promise((resolve, reject) => {
-    wx.showLoading({
-      title: '加载中',
-      mask: true
-    })
+    if (!params.noLoad) { // 允许不适用加载等待，在参数中配置noLoad: true
+      wx.showLoading({
+        title: '加载中',
+        mask: true
+      })
+    }
     wx.request({
       url: apiUrl + params.url, // 服务器url+参数中携带的接口具体地址
       data: params.data, // 请求参数
       header: {
         "Content-Type": params.ContentType || "application/x-www-form-urlencoded", // 设置默认格式为表单，特殊情况调用的时候单独设置
-        // 'Cookie': wx.getStorageSync('sessionid')  // 统一设置请求头
+        'authorization': wx.getStorageSync('TOKEN') || null  // 统一设置请求头
        },
       //  session会话的设置
       // xhrFields: {
@@ -76,10 +75,12 @@ export const fetch = (params) => {
 export const uploadFetch = (params) => {
   // 返回promise 对象
   return new Promise((resolve, reject) => {
-    wx.showLoading({
-      title: '加载中',
-      mask: true
-    })
+    if (!params.noLoad) {
+      wx.showLoading({
+        title: '加载中',
+        mask: true
+      })
+    }
     wx.uploadFile({
       url: params.url || uploadUrl , // 仅为示例，非真实的接口地址
       filePath:  params.filePath,

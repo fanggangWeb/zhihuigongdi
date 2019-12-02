@@ -1,6 +1,6 @@
 <view class="container">
   <view class="list-con">
-    <view class="list {{item.isRead==0?'':'isRead'}}" wx:for="{{dataList}}">
+    <view class="list {{item.isRead==0?'':'isRead'}}" wx:for="{{dataList}}" data-item="{{item}}" bindtap="detailOne">
       <view class="icon-con">
         <view class="icon-dot" wx:if="{{item.isRead==0}}"></view>
         <image class="icon-img" wx:if="{{item.type==1&&item.isRead==0}}" src="../../assets/images/Reentry.png"></image>
@@ -20,4 +20,5 @@
     </view>
   </view>
 </view>
-<message-modal wx:if="{{dialogState}}" bind:confirm="hadKnown" title="预警信息" content="某某某。。。" confirmText="我已知晓"></message-modal>
+<message-modal wx:if="{{dialogState}}" bind:confirm="hadKnown" title="{{dialogTitle}}" content="{{dialogContent}}" confirmText="{{confirmText}}">
+</message-modal>

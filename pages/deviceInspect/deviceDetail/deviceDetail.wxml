@@ -2,7 +2,7 @@
   <view class="detail-con">
     <view class="header">
       <view class="line"></view>
-      <view class="title">实时监测</view>
+      <view class="title">实时检测</view>
       <view class="line"></view>
     </view>
     <view class="subtitle">
@@ -13,32 +13,32 @@
     </view>
     <view class="body-one">
       <view class="two-con">
-        <view class="key">操作员：</view>
-        <view class="value">曹欢</view>
+        <view class="key">高度：</view>
+        <view class="value">{{deviceInfo.height}}</view>
       </view>
       <view class="two-con">
-        <view class="key">小车幅度：</view>
-        <view class="value">11.9%</view>
+        <view class="key">幅度：</view>
+        <view class="value">{{deviceInfo.amplitude}}</view>
       </view>
       <view class="two-con">
-        <view class="key">起重量：</view>
-        <view class="value">150kg</view>
+        <view class="key">载重：</view>
+        <view class="value">{{deviceInfo.load}}</view>
       </view>
       <view class="two-con">
         <view class="key">安全重量：</view>
-        <view class="value">-T</view>
+        <view class="value">{{deviceInfo.realTimeRatedLoad}}</view>
       </view>
       <view class="two-con">
-        <view class="key">负荷率：</view>
-        <view class="value">50%</view>
+        <view class="key">力矩：</view>
+        <view class="value">{{deviceInfo.torque}}</view>
       </view>
       <view class="two-con">
         <view class="key">塔臂转角：</view>
-        <view class="value">288.8%</view>
+        <view class="value">{{deviceInfo.rotary}}</view>
       </view>
       <view class="one-con">
         <view class="key">数据时间：</view>
-        <view class="value">2019-11-13</view>
+        <view class="value">{{deviceInfo.recordTime}}</view>
       </view>
     </view>
   </view>

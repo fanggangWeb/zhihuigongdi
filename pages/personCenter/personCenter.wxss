@@ -1,70 +1,97 @@
-/* pages/center/center.wxss */
-/* 顶部图片 */
-.header>image:nth-child(1){
-  width: 750rpx;
-  height:312rpx;
-  display: block;
+page {
+  width: 100%;
 }
-.header>image:nth-child(2){
+.container {
+  width: 100%;
+}
+
+.top {
+  width: 100%;
+  height: 312rpx;
+  position: relative;
+}
+.top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 用户信息 */
+.userinfo {
+  position: absolute;
+  top: 58rpx;
+  left: 30rpx;
+  width: calc(100% - 60rpx);
+  height: 160rpx;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.avatar {
   width: 160rpx;
-  height:160rpx;
-  display: block;
-  margin-top: -260rpx;
-  margin-left: 30rpx;
+  height: 160rpx;
+  border-radius: 50%;
 }
-/* 头像字体 */
-#name{
-  display: block;
-  margin-left: 220rpx;
-  margin-top: -130rpx;
- color: #fff;
- font-size: 40rpx;
- font-weight:Medium;
- font-family: PingFang SC;
+.info {
+  width: calc(100% - 180rpx);
+  height: 100%;
+  margin-left: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#phone{
-  display: block;
-  color: #fff;
-  margin-left: 220rpx;
-  margin-top: 16rpx;
+.name {
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: white;
+}
+.phone {
+  height: 44rpx;
+  line-height: 44rpx;
   font-size: 32rpx;
-  font-weight: Medium;
-font-family: PingFang SC;
+  color: white;
+  margin-top: 8rpx;
 }
-/* 中间内容样式 */
-.box{
-  /* border: 1px red solid; */
-  width: 688rpx;
-  margin: 0 auto;
-  margin-top: 116rpx;
+/* 操作栏 */
+.option-con {
+  width: 100%;
 }
-.myphone{
-  border-bottom: 0.5rpx #f1f1f1 solid;
+.options {
+  width: calc(100% - 64rpx);
+  margin-left: 32rpx;
   height: 120rpx;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-.myphone>image{
+.options .icon {
   width: 44rpx;
   height: 44rpx;
-  margin-top: 38rpx;
 }
-.modify{
-  margin-left: 60rpx;
-  margin-top: -50rpx;
-  display: block;
-  color: #222;
+.options .text {
+  color: #222222;
   font-size: 34rpx;
-  font-weight: Medium;
+  margin-left: 20rpx;
 }
-/* 粗体 */
-#bold{
+.split-line {
   width: 100%;
-  height: 10rpx;
-  background: #f1f1f1;
-  margin-top: -125rpx;
+  height: 8rpx;
+  background: #F1F1F1;
 }
-/* 底部背景图 */
-#background>image{
-  width: 750rpx;
+.border-bottom {
+  border-bottom: 1px solid #DDDDDD;
+}
+/* 底部的背景图片 */
+.bottom-bg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   height: 330rpx;
-  margin-top: 220px;
+  z-index: -1;
 }

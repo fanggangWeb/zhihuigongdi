@@ -38,13 +38,13 @@
       {
         "selectedIconPath": "./assets/images/tab-message1.png",  
         "iconPath": "./assets/images/tab-message.png",  
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/alertMessage/alertMessage",
         "text": "预警消息"
       },
       {
-        "selectedIconPath": "./assets/images/tab-personal.png",  
-        "iconPath": "./assets/images/tab-personal1.png",  
-        "pagePath": "pages/home/home",
+        "selectedIconPath": "./assets/images/tab-personal1.png",  
+        "iconPath": "./assets/images/tab-personal.png",  
+        "pagePath": "pages/personCenter/personCenter",
         "text": "个人中心"
       }
     ]

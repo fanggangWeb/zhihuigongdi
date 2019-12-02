@@ -4,7 +4,10 @@ import { fetch, apiUrl } from '../../utils/fetch'
 //Page Object
 Page({
   data: {
-    dialogState: true,
+    dialogState: false,
+    dialogTitle: "这是标题",
+    dialogContent: "这里是内容区域",
+    confirmText: "我已知晓",
     dataList: [
       {
         type: 1, // 1反潜 2超时
@@ -49,6 +52,18 @@ Page({
   },
   onUnload: function() {
 
+  },
+  // 查看某一个告警信息的详情
+  detailOne (e) {
+    // console.log(e.currentTarget.dataset.item)
+    this.setData({
+      dialogState: true
+    })
+  },
+  hadKnown () {
+    this.setData({
+      dialogState: false
+    })
   }
 });
   

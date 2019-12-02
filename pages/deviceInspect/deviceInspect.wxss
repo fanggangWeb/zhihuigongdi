@@ -68,9 +68,9 @@
   margin-bottom: 17rpx;
   border-radius: 50%;
   background: #14CC7C;
+  margin-left: 14rpx;
 }
 .status-text {
   display: inline-block;
-  margin-left: 14rpx;
   width: calc(100% - 24rpx);
 }

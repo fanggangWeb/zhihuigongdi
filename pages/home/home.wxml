@@ -3,23 +3,25 @@
     <image class="" src="../../assets/images/home/top-bg.png"> 
     </image>
   </view>
-  <view class="address-con">
-    <image class="icon" src="../../assets/images/home/address.png"></image>
-    <view class="text">这里是某某工地的某个小区</view>
-    <image class="arrow" src="../../assets/images/home/arrow-down.png"></image>
-  </view>
+  <picker mode="selector" range="{{projectList}}" range-key="name" value="{{projectIndex}}" bindchange="projectChange">
+    <view class="address-con">
+      <image class="icon" src="../../assets/images/home/address.png"></image>
+      <view class="text">{{projectList[projectIndex].name}}</view>
+      <image class="arrow" src="../../assets/images/home/arrow-down.png"></image>
+    </view>
+  </picker>
   <view class="banner">
     <image src="../../assets/images/home/banner.png"></image>
   </view>
   <view class="top-menu">
-    <view class="menu" wx:for="{{topMenuList}}">
+    <view class="menu" wx:for="{{topMenuList}}" data-item="{{item}}" bindtap="menuGo">
       <image class="icon" src="{{item.image}}"></image>
       <view class="name">{{item.name}}</view>
     </view>
   </view>
   <view class="title">工作管理</view>
-  <view class="work-menu">
-    <view class="menu" wx:for="{{workMenuList}}">
+  <view class="work-menu" >
+    <view class="menu" wx:for="{{workMenuList}}" data-item="{{item}}" bindtap="menuGo">
       <image class="icon" src="{{item.image}}"></image>
       <view class="text">{{item.name}}</view>
     </view>

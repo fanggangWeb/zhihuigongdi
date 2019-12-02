@@ -8,7 +8,6 @@ Page({
     originPwd: "", // 原密码
     nowPwd: "", // 新密码
     pwdAgain: "", // 再次输入的密码
-    height: app.globalData.statusBarHeight + app.globalData.headerHeight // 此页面 页面内容距最顶部的距离
   },
   //options(Object)
   onLoad: function (options) {
@@ -71,7 +70,33 @@ Page({
       return
     }
     let data = {
+      oldPassword: this.data.originPwd,
+      newPassword: this.data.nowPwd
     }
+    fetch({
+      url: "/user/updatePassword",
+      ContentType: "application/json;charset=utf-8",
+      data
+    }).then(res => {
+      if (res.errcode == 0) {
+        wx.showToast({
+          title: '密码修改成功',
+          icon: 'success',
+          duration: 2500
+        });
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 1
+          });
+        }, 2500);
+      } else {
+        wx.showModal({
+          title: '错误',
+          content: res.msg,
+          showCancel: false
+        });
+      }
+    })
   },
   // 发送短信的按钮
   sendMsg () {

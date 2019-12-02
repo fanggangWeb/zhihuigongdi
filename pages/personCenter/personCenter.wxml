@@ -1,34 +1,28 @@
-<!--pages/center/center.wxml-->
-<view>
- <!-- 顶部图片 -->
-   <view class="header"> 
-   <image src="{{background}}"></image>
-   <image src="{{center}}"></image>
-   <!-- 姓名 -->
-   <text id="name">{{name}}</text>
-   <text id="phone">{{phone}}</text>
+<view class="container">
+  <view class="top">
+    <image class="top-bg" src="../../assets/images/background2.png"></image>
+  </view>
+  <view class="userinfo">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    <view class="info">
+      <view class="name">{{userName}}</view>
+      <view class="phone">{{userPhone}}</view>
     </view>
-    <!-- 中间内容 -->
-    <view class="box">
-    <!-- 修改电话 -->
-        <view class="myphone">
-         <image src="{{myphone}}"></image>
-         <text class="modify">{{modify}}</text>
-        </view>
-<!-- 修改密码 -->
-<view class="myphone">
-         <image src="{{password2}}"></image>
-         <text class="modify">{{password}}</text>
-        </view>
-        <!-- 退出登录 -->
-        <view class="myphone">
-         <image src="{{out}}"></image>
-         <text class="modify">{{Logout}}</text>
-        </view>
+  </view>
+  <view class="option-con">
+    <view class="options border-bottom" bindtap="modifyPhone">
+      <image class="icon" src="../../assets/images/phone.png"></image>
+      <view class="text">修改电话</view>
     </view>
-    <view id="bold"></view>
-    <!-- 底部背景图 -->
-    <view id="background">
-      <image src="{{img}}"></image>    
+    <view class="options" bindtap="modifyPassword">
+      <image class="icon" src="../../assets/images/password.png"></image>
+      <view class="text">修改密码</view>
     </view>
+    <view class="split-line"></view>
+    <view class="options border-bottom" bindtap="logOut">
+      <image class="icon" src="../../assets/images/switch.png"></image>
+      <view class="text">退出登录</view>
+    </view>
+  </view>
 </view>
+<image class="bottom-bg" src="../../assets/images/common-bg.png"></image>

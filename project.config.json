@@ -104,17 +104,17 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "设备监测",
+					"id": 8,
+					"name": "设备检测",
 					"pathName": "pages/deviceInspect/deviceInspect",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 9,
 					"name": "设备详情",
 					"pathName": "pages/deviceInspect/deviceDetail/deviceDetail",
-					"query": "",
+					"query": "serialNo=cscr001",
 					"scene": null
 				},
 				{
@@ -142,6 +142,13 @@
 					"id": -1,
 					"name": "预警消息",
 					"pathName": "pages/alertMessage/alertMessage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/personCenter/personCenter",
 					"query": "",
 					"scene": null
 				}

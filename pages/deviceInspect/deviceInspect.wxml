@@ -1,13 +1,13 @@
 <view class="container">
-  <view class="device-con"  wx:for="{{deviceList}}" bindtap="viewDetail">
-    <view class="device">
+  <view class="device-con">
+    <view class="device"  wx:for="{{deviceList}}" bindtap="viewDetail" data-item="{{item}}">
       <image class="device-bg" src="../../assets/images/deviceInspect/device-bg.jpg"></image>
       <view class="device-content">
-        <view class="name">设备二</view>
-        <view class="operator">操作员：章子怡</view>
+        <view class="name">设备编号：{{item.serialNo}}</view>
+        <view class="operator">设备类型：{{item.deviceType}}</view>
         <view class="status-con">
-          <view class="status-dot"></view>
-          <view class="status-text">在线</view>
+          <!-- <view class="status-dot"></view> -->
+          <view class="status-text">备案编号：{{item.registNo}}</view>
         </view>
       </view>
     </view>
