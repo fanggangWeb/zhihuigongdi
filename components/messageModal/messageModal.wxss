@@ -50,4 +50,5 @@
   color: white;
   background: #1CB975;
   border-radius: 46rpx;
+  cursor: pointer;
 }

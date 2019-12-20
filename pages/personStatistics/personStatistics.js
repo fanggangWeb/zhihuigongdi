@@ -10,6 +10,7 @@ var index = 0
 var colorList = ["#5FACF9", "#FFBA55", "#FF9B4D", "#FF8E50", "#56D193"]
 
 var option = {
+  color: ["#5FACF9", "#FFBA55", "#FF9B4D", "#FF8E50", "#56D193"],
   title: {
     text: '(项目人员构成图)',
     // subtext: '纯属虚构',
@@ -33,40 +34,41 @@ var option = {
   series: [{
     name: '人员统计',
     type: 'pie',
-    radius: '55%',
+    radius: '46%',
     center: ['50%', '60%'],
-    data: [{
-        value: 335,
-        name: '施工单位'
-      },
-      {
-        value: 310,
-        name: '监理单位'
-      },
-      {
-        value: 234,
-        name: '建设单位'
-      },
-      {
-        value: 135,
-        name: '其他'
-      },
-      {
-        value: 1548,
-        name: '作业工人'
-      }
+    data: [
+      // {
+      //   value: 335,
+      //   name: '施工单位'
+      // },
+      // {
+      //   value: 310,
+      //   name: '监理单位'
+      // },
+      // {
+      //   value: 234,
+      //   name: '建设单位'
+      // },
+      // {
+      //   value: 135,
+      //   name: '其他'
+      // },
+      // {
+      //   value: 1548,
+      //   name: '作业工人'
+      // }
     ],
     itemStyle: {
       normal: {
-        color: function () {
-          return colorList[index++];
-        },
+        // color: function () {
+        //   return colorList[index++];
+        // },
         label: {
           show: true,
-          formatter: "{d}%\n{b}",
+          formatter: "{d}%({c}个)\n{b}",
           textStyle: {
-            fontSize: '13',
-            fontWeight: 'bold'
+            fontSize: '12',
+            // fontWeight: 'bold'
           }
         },
         labelLine: {
@@ -76,9 +78,9 @@ var option = {
       emphasis: {
         label: {
           show: true,
-          position: 'center',
+          // position: 'center',
           textStyle: {
-            fontSize: '14',
+            fontSize: '12',
             fontWeight: 'bold'
           }
         }
@@ -108,27 +110,36 @@ Page({
     that = this
   },
   onReady: function () {},
-  onShow: function () {},
+  onShow: function () {
+    this.getUserType()
+  },
   onHide: function () {
 
   },
   onUnload: function () {
 
   },
-  // 日期选择器改变
-  dateChange(e) {
-    // console.log(e)
-    this.setData({
-      date: e.detail.value
+  // 获取所有的人员分类
+  getUserType () {
+    let data = {
+      projectId: wx.getStorageSync("projectId")
+    }
+    fetch({
+      url: "/worker/usertype",
+      ContentType: "application/json;charset=uft-8",
+      data
+    }).then(res => {
+      if (res.errcode == 0) {
+        option.series[0].data = res.data
+        chart.setOption(option);
+      } else {
+        wx.showModal({
+          title: '错误',
+          content: res.msg,
+          showCancel: false
+        });
+      }
     })
-  },
-  swtichChange(e) {
-    // console.log(e.currentTarget.dataset.item)
-    this.setData({
-      switchValue: e.currentTarget.dataset.item.value
-    })
-    // option.series[0].data = arr
-    // chart.setOption(option);
   },
   // 获取今天的日期
   getToday() {

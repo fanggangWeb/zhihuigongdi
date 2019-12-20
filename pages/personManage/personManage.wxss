@@ -30,17 +30,20 @@ page {
 .classify {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .classify-item {
-  flex: 1;
+  /* flex: 1; */
+  width: 25%;
   height: 150rpx;
   background: white;
   border-right: #F1F1F1 1rpx solid;
+  border-bottom: #F1F1F1 1rpx solid;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .classify-item:last-child {
   border-right: none;

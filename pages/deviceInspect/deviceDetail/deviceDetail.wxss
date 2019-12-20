@@ -111,13 +111,16 @@
   flex-wrap: nowrap;
 }
 .row .left, .row .right {
-  width: 50%;
+  width: 40%;
   height: 50rpx;
   line-height: 50rpx;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 32rpx;
+}
+.row .right {
+  width: 60%;
 }
 .row .left {
   color: #666666;

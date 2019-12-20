@@ -3,5 +3,6 @@
   "backgroundTextStyle": "dark",
   "usingComponents": {
     "message-modal": "../../components/messageModal/messageModal"
-  }
+  },
+  "enablePullDownRefresh": true
 }

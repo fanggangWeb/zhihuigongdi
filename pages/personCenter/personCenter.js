@@ -81,16 +81,22 @@ Page({
                 wx.reLaunch({
                   url: '../login/login',
                 });
-              }, 2500)
+              }, 2000)
               
             } else {
               wx.showToast({
-                title: '退出登录失败',
+                title: '已为您清除登录信息',
                 icon: 'none',
                 image: '',
                 duration: 2500,
                 mask: true
               });
+              wx.clearStorageSync();
+              setTimeout(() => {
+                wx.reLaunch({
+                  url: '../login/login',
+                });
+              }, 2000)
             }
           })
         }

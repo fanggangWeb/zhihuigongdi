@@ -7,9 +7,9 @@
     </view>
     <view class="subtitle">
       <view class="block"></view>
-      <view class="device-name">设备2</view>
-      <view class="status-dot"></view>
-      <view class="status-text">在线</view>
+      <view class="device-name">{{deviceInfo.serialNo}}</view>
+      <!-- <view class="status-dot"></view>
+      <view class="status-text">在线</view> -->
     </view>
     <view class="body-one">
       <view class="two-con">
@@ -50,10 +50,10 @@
     </view>
     <view class="body-two">
       <view class="row">
-        <view class="left">设备剩余寿命：</view>
-        <view class="right">5年</view>
+        <view class="left">设备安装时间：</view>
+        <view class="right">{{warnInfo.installDate}}</view>
       </view>
-      <view class="row">
+      <!-- <view class="row">
         <view class="left">进场安装：</view>
         <view class="right">1年190天</view>
       </view>
@@ -64,18 +64,18 @@
       <view class="row">
         <view class="left">总体运行情况：</view>
         <view class="right">良好</view>
-      </view>
+      </view> -->
       <view class="row">
         <view class="left">近24小时预警</view>
-        <view class="right">0次</view>
+        <view class="right">{{warnInfo.today}}</view>
       </view>
       <view class="row">
         <view class="left">近7日预警</view>
-        <view class="right">0次</view>
+        <view class="right">{{warnInfo.weeks}}</view>
       </view>
       <view class="row">
         <view class="left">近30日预警</view>
-        <view class="right">0次</view>
+        <view class="right">{{warnInfo.months}}</view>
       </view>
     </view>
   </view>

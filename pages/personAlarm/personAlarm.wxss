@@ -29,10 +29,31 @@ page {
   width: 96rpx;
   height: 96rpx;
 }
-.icon-img {
+.icon-icon {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  line-height: 96rpx;
+  text-align: center;
+  background: #1CB975;
+  color: white;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.isRead .icon-icon {
+  background: #A4AFB2;
+}
+.long-top, .long-bottom {
+  width: 100%;
+  height: 50%;
+}
+.icon-icon .long-top {
+  line-height: 63rpx;
+}
+.icon-icon .long-bottom {
+  line-height: 38rpx;
 }
 .icon-dot {
   position: absolute;
@@ -61,12 +82,12 @@ page {
   text-overflow: ellipsis;
 }
 .type {
-  width: 400rpx;
+  width: 300rpx;
   font-size: 32rpx;
   font-weight: bold;
 }
 .time {
-  width: 160rpx;
+  width: 260rpx;
   margin-left: auto;
   color: #7F8A8D;
   font-size: 24rpx;

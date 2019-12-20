@@ -2,7 +2,7 @@
 page {
   width: 100%;
 }
-
+@import "/pages/no_data/index.wxss"
 /* 隐藏滚动条 */
 /* ::-webkit-scrollbar{
 	width: 0;

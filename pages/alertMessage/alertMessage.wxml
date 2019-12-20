@@ -1,22 +1,31 @@
+<import src="../no_data/index" />
 <view class="container">
   <view class="list-con">
-    <view class="list {{item.isRead==0?'':'isRead'}}" wx:for="{{dataList}}">
+    <block wx:if="{{noDataState}}">
+      <template is="noData" data="{{text:'暂无相关数据', mtop:300}}"></template>
+    </block>
+    <view class="list {{item.isRead==0?'':'isRead'}}" wx:for="{{dataList}}"  data-item="{{item}}" bindtap="detailOne">
       <view class="icon-con">
         <view class="icon-dot" wx:if="{{item.isRead==0}}"></view>
-        <image class="icon-img" wx:if="{{item.type==1&&item.isRead==0}}" src="../../assets/images/alertMessage/helmet.png"></image>
-        <image class="icon-img" wx:if="{{item.type==1&&item.isRead==1}}" src="../../assets/images/alertMessage/helmet1.png"></image>
-        <image class="icon-img" wx:if="{{item.type==2&&item.isRead==0}}" src="../../assets/images/alertMessage/person-intrusion.png"></image>
-        <image class="icon-img" wx:if="{{item.type==2&&item.isRead==1}}" src="../../assets/images/alertMessage/person-intrusion1.png"></image>
-        <image class="icon-img" wx:if="{{item.type==3&&item.isRead==0}}" src="../../assets/images/alertMessage/crowd-gather.png"></image>
-        <image class="icon-img" wx:if="{{item.type==3&&item.isRead==1}}" src="../../assets/images/alertMessage/crowd-gather1.png"></image>
-        <image class="icon-img" wx:if="{{item.type==4&&item.isRead==0}}" src="../../assets/images/alertMessage/fire.png"></image>
-        <image class="icon-img" wx:if="{{item.type==4&&item.isRead==1}}" src="../../assets/images/alertMessage/fire1.png"></image>
-        <image class="icon-img" wx:if="{{item.type==5&&item.isRead==0}}" src="../../assets/images/alertMessage/muck-truck.png"></image>
-        <image class="icon-img" wx:if="{{item.type==5&&item.isRead==1}}" src="../../assets/images/alertMessage/muck-truck1.png"></image>
-        <image class="icon-img" wx:if="{{item.type==6&&item.isRead==0}}" src="../../assets/images/alertMessage/boundary.png"></image>
-        <image class="icon-img" wx:if="{{item.type==6&&item.isRead==1}}" src="../../assets/images/alertMessage/boundary1.png"></image>
-        <image class="icon-img" wx:if="{{item.type==7&&item.isRead==0}}" src="../../assets/images/alertMessage/material.png"></image>
-        <image class="icon-img" wx:if="{{item.type==7&&item.isRead==1}}" src="../../assets/images/alertMessage/material1.png"></image>
+        <!-- <image class="icon-icon" wx:if="{{item.type==1&&item.isRead==0}}" src="../../assets/images/alertMessage/helmet.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==1&&item.isRead==1}}" src="../../assets/images/alertMessage/helmet1.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==2&&item.isRead==0}}" src="../../assets/images/alertMessage/person-intrusion.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==2&&item.isRead==1}}" src="../../assets/images/alertMessage/person-intrusion1.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==3&&item.isRead==0}}" src="../../assets/images/alertMessage/crowd-gather.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==3&&item.isRead==1}}" src="../../assets/images/alertMessage/crowd-gather1.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==4&&item.isRead==0}}" src="../../assets/images/alertMessage/fire.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==4&&item.isRead==1}}" src="../../assets/images/alertMessage/fire1.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==5&&item.isRead==0}}" src="../../assets/images/alertMessage/muck-truck.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==5&&item.isRead==1}}" src="../../assets/images/alertMessage/muck-truck1.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==6&&item.isRead==0}}" src="../../assets/images/alertMessage/boundary.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==6&&item.isRead==1}}" src="../../assets/images/alertMessage/boundary1.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==7&&item.isRead==0}}" src="../../assets/images/alertMessage/material.png"></image>
+        <image class="icon-icon" wx:if="{{item.type==7&&item.isRead==1}}" src="../../assets/images/alertMessage/material1.png"></image> -->
+        <view class="icon-icon" wx:if="{{item.icon.length<4}}">{{item.icon}}</view>
+        <view class="icon-icon .long" wx:if="{{item.icon.length >=4 }}">
+          <view class="long-top">{{item.icon[0]+item.icon[1]}}</view>
+          <view class="long-bottom">{{item.icon[2]+item.icon[3]}}</view>
+        </view>
       </view>
       <view class="text-con">
         <view class="text-top">
@@ -30,4 +39,5 @@
     </view>
   </view>
 </view>
-<message-modal wx:if="{{dialogState}}" bind:confirm="hadKnown" title="预警信息" content="某某某。。。" confirmText="我已知晓"></message-modal>
+<message-modal wx:if="{{dialogState}}" bind:confirm="hadKnown" title="{{oneInfo.title}}" content="{{oneInfo.content}}" confirmText="{{confirmText}}">
+</message-modal>

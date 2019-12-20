@@ -105,7 +105,7 @@ Page({
     wx.setStorageSync("projectId", this.data.projectList[e.detail.value].guid);
   },
   menuGo (e) {
-    console.log(e)
+    // console.log(e)
     if (e.currentTarget.dataset.item.type == "switch") {
       wx.switchTab({
         url: e.currentTarget.dataset.item.path

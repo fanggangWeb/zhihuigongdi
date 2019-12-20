@@ -1,9 +1,10 @@
 /**
  * 封装http 请求方法
  */
-export const apiUrl = "http://app.weiotchina.cn:9002" // 服务器api地址
+export const apiUrl = "https://app.weiotchina.cn:9002" // 服务器api地址
 export const uploadUrl = "" // 统一上传文件地址
 export const imageURL = 'http://94.191.108.118:8080/kang-resource/' // 统一图片地址
+var num = 0
 export const fetch = (params) => {
   //返回promise 对象
   return new Promise((resolve, reject) => {
@@ -12,6 +13,7 @@ export const fetch = (params) => {
         title: '加载中',
         mask: true
       })
+      num++
     }
     wx.request({
       url: apiUrl + params.url, // 服务器url+参数中携带的接口具体地址
@@ -36,7 +38,11 @@ export const fetch = (params) => {
             showCancle: false
           })
         }
-        wx.hideLoading()
+        num--
+        if (num<=0) {
+          wx.hideLoading()
+        }
+        
         // 接口访问正常返回数据
         if (res.statusCode == 200) {
           // console.log(res)
@@ -52,7 +58,10 @@ export const fetch = (params) => {
         }
       },
       fail: function (error) {
-        wx.hideLoading()
+        num--
+        if (num<=0) {
+          wx.hideLoading()
+        }
         // console.log(error)
         wx.showModal({
           title: "错误",
@@ -62,7 +71,7 @@ export const fetch = (params) => {
         reject(error)
       },
       complete: function (res) {
-        wx.hideLoading()
+        // wx.hideLoading()
         // wx.showModal({
         //   content: '网络连接超时,请稍后重试'
         // })

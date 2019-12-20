@@ -1,51 +1,29 @@
 <view class="container">
-  <live-player id="player" orientation='horizontal' object-fit='fillCrop' class="top-video" src="rtmp://58.200.131.2:1935/livetv/hunantv" autoplay="{{true}}" mode="live" bindstatechange="statechange" binderror="error"/>
-  <view class="channel-info">
+  <view class="top">
+    <!-- <live-player id="player"  class="top-video" object-fit="contain" src="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8" bindstatechange="statechange" bindtap="startOrStop"  binderror="error">
+      <cover-view class="play-popup" wx:if="{{!videoState}}" catchtap="startOrStop">
+        <cover-image class="play-icon" src="../../assets/images/videoMonitor/play.png"></cover-image>
+      </cover-view>
+      <cover-image class="full-screen {{fullScreenFlag==true?'active':''}}" catchtap="fullOrSmallScreen" src="../../assets/images/videoMonitor/fullsreen.png" ></cover-image>
+    </live-player> -->
+    <video class="top-video" autoplay="{{true}}" controls="{{true}}" src="{{cameraFirst.playUrl}}"></video>
+  </view>
   
+  <view class="channel-info">
     <image class="channel-icon" src="../../assets/images/videoMonitor/channel-icon.png"></image>
-    <view class="channel-name">频道：1</view>
-    <view class="dot"></view>
-    <view class="stauts-text">在线</view>
+    <view class="channel-name">频道：{{cameraFirst.cameraNo}}</view>
+    <!-- <view class="dot"></view>
+    <view class="stauts-text">在线</view> -->
   </view>
   <view class="video-list">
-    <view class="video-item">
-      <image class="poster" src="../../assets/images/text.jpg"></image>
+    <view class="video-item" wx:for="{{cameraList}}" data-item="{{item}}" bindtap="changeVideo">
+      <image class="poster" src="{{item.coverUrl}}"></image>
       <view class="info-bar">
-        <view class="name">频道1</view>
-        <view class="status">
+        <view class="name">频道{{item.cameraNo}}</view>
+        <!-- <view class="status">
           <view class="status-dot"></view>
           <view class="status-value">在线</view>
-        </view>
-      </view>
-    </view>
-    <view class="video-item">
-      <image class="poster" src="../../assets/images/text.jpg"></image>
-      <view class="info-bar">
-        <view class="name">频道1</view>
-        <view class="status">
-          <view class="status-dot"></view>
-          <view class="status-value">在线</view>
-        </view>
-      </view>
-    </view>
-    <view class="video-item">
-      <image class="poster" src="../../assets/images/text.jpg"></image>
-      <view class="info-bar">
-        <view class="name">频道1</view>
-        <view class="status">
-          <view class="status-dot"></view>
-          <view class="status-value">在线</view>
-        </view>
-      </view>
-    </view>
-    <view class="video-item">
-      <image class="poster" src="../../assets/images/text.jpg"></image>
-      <view class="info-bar">
-        <view class="name">频道1</view>
-        <view class="status">
-          <view class="status-dot"></view>
-          <view class="status-value">在线</view>
-        </view>
+        </view> -->
       </view>
     </view>
   </view>

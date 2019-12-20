@@ -6,10 +6,62 @@ page {
 .container {
   width: 100%;
 }
-.top-video {
+/* 头部播放器组件的整体布局 */
+.top {
+  position: relative;
   width: 100%;
   height: 420rpx;
 }
+/* 播放按钮的同层按钮 */
+.play-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11; /*0-9级可以用来防止全屏按钮等常规操作  11级以上是基础的播放暂停*/
+  background: rgba(0,0,0,0.4);
+  display: flex;
+}
+.play-icon {
+  position: absolute;
+  top: calc(50% - 42rpx);
+  left: calc(50% - 34rpx);
+  width: 68rpx;
+  height: 83rpx;
+}
+/* 只做点击的蒙层 */
+.only-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(255,255,255,0);
+}
+
+/* 全屏按钮 */
+.full-screen {
+  position: absolute;
+  bottom: 24rpx;
+  right: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 9;
+}
+.full-screen.active {
+  right: 100rpx;
+}
+
+/* 视频本身 */
+.top-video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
 /* 信息条 */
 .channel-info {
   width: 100%;
